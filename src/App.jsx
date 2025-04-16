@@ -239,36 +239,30 @@ export default function App() {
       { text: 'e^x', onClick: () => applyFunction('exp'), customClass: 'function-btn' },
       { text: '^', onClick: () => performOperation('^'), customClass: 'operator-btn' },
     ],
-    // Row 4
     [
       { text: '7', onClick: () => inputDigit('7'), customClass: 'digit-btn' },
       { text: '8', onClick: () => inputDigit('8'), customClass: 'digit-btn' },
       { text: '9', onClick: () => inputDigit('9'), customClass: 'digit-btn' },
       { text: '÷', onClick: () => performOperation('÷'), customClass: 'operator-btn' },
       { text: '%', onClick: inputPercent, customClass: 'operator-btn' },
+      { text: '×', onClick: () => performOperation('×'), customClass: 'operator-btn' },
     ],
-    // Row 5
     [
       { text: '4', onClick: () => inputDigit('4'), customClass: 'digit-btn' },
       { text: '5', onClick: () => inputDigit('5'), customClass: 'digit-btn' },
       { text: '6', onClick: () => inputDigit('6'), customClass: 'digit-btn' },
-      { text: '×', onClick: () => performOperation('×'), customClass: 'operator-btn' },
       { text: '±', onClick: toggleSign, customClass: 'operator-btn' },
+      { text: '-', onClick: () => performOperation('-'), customClass: 'operator-btn' },
+      { text: '+', onClick: () => performOperation('+'), customClass: 'operator-btn' },
     ],
-    // Row 6
     [
       { text: '1', onClick: () => inputDigit('1'), customClass: 'digit-btn' },
       { text: '2', onClick: () => inputDigit('2'), customClass: 'digit-btn' },
       { text: '3', onClick: () => inputDigit('3'), customClass: 'digit-btn' },
-      { text: '-', onClick: () => performOperation('-'), customClass: 'operator-btn' },
-      { text: '=', onClick: calculateResult, customClass: 'equals-btn', rowSpan: 2 },
-    ],
-    // Row 7
-    [
-      { text: '0', onClick: () => inputDigit('0'), customClass: 'digit-btn', colSpan: 2 },
+      { text: '0', onClick: () => inputDigit('0'), customClass: 'digit-btn'},
       { text: '.', onClick: inputDecimal, customClass: 'digit-btn' },
-      { text: '+', onClick: () => performOperation('+'), customClass: 'operator-btn' },
-    ]
+      { text: '=', onClick: calculateResult, customClass: 'equals-btn'},
+    ],
   ];
 
   return (
